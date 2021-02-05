@@ -1,0 +1,123 @@
+[
+  {
+    "name": "frontModule",
+    "enabled": false,
+    "data": {
+      "module": "faq",
+      "route": "/faq",
+      "serviceRoute": "/faq"
+    }
+  },
+  {
+    "name": "adminModule",
+    "defaults": {
+      "table": {
+        "formOptions": {
+          "size": "md",
+          "fullScreen": false,
+          "singleName": "service"
+        },
+        "filter[]": {
+          "col": 3,
+          "type": "search",
+          "name": "id",
+          "placeholder": "#"
+        },
+        "columns[]": {
+          "heading": "name",
+          "key": "name",
+          "formatter": "columnFormatter"
+        },
+        "columnFormatters": {
+          "multiLingual": "MultiLingualFormatter",
+          "image": "ImageFormatter",
+          "bool": "BooleanFormatter",
+          "boolean": "BooleanFormatter",
+          "email": "EmailFormatter",
+          "number": "NumberFormatter",
+          "translator": "TranslatorFormatter",
+          "badge": "BadgeFormatter",
+          "select": "DropdownFormatter",
+          "dropdown": "DropdownFormatter",
+          "link": "LinkFormatter",
+          "imageLink": "ImageLinkFormatter",
+          "switch": "SwitchFormatter"
+        }
+      },
+      "form": {
+        "inputs[]": {
+          "type": "autoComplete",
+          "autoFocus": false,
+          "newRow": true,
+          "required": true,
+          "label": "type",
+          "service": "carModels",
+          "name": "carModel"
+        },
+        "formInput": {
+          "text": "TextInput",
+          "textarea": "TextareaInput",
+          "hidden": "HiddenInput",
+          "number": "NumberInput",
+          "email": "EmailInput",
+          "password": "PasswordInput",
+          "select": "SelectInput",
+          "dropdown": "SelectInput",
+          "autoComplete": "AutoComplete",
+          "checkbox": "Checkbox",
+          "switch": "SwitchButton",
+          "radio": "RadioGroup",
+          "richText": "RichTextInput",
+          "date": "DatePicker",
+          "image": "ImageInput",
+          "file": "FileInput",
+          "markdown": "MarkdownInput",
+          "MultiLingualInput": "MultiLingualInput"
+        }
+      }
+    },
+    "data": {
+      "module": "canelation",
+      "route": "/canelation",
+      "role": "canelation",
+      "serviceRoute": "/canelation",
+      "sidebar": {
+        "icon": {
+          "path": "@material-ui/icons/Build",
+          "as": "BuildIcon"
+        }
+      },
+      "translations": {
+        "shared": {
+          "ar": {
+            "canelation": "اسباب الغاء الحجوزات"
+          }
+        }
+      },
+      "table": {
+        "formOptions": {
+          "size": "md",
+          "singleName": "canelation"
+        },
+     
+        "columns": [
+          {
+            "heading": "reason",
+            "key": "reason"          
+          }
+        ]
+      },
+      "form": {
+        "inputs": [
+          {
+            "type": "textarea",
+            "required": true,
+            "placeholder": "reason",
+            "autoFocus": true,
+            "name": "reason"
+          }
+        ]
+      }
+    }
+  }
+]
